@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Massi Avventura</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <link rel="icon" href="images/volex/Retina/favicon.ico">
+
+    <script type="text/javascript">
+        var mode = "player";
+    </script>
+
+    <!-- jquery -->
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+
+    <!-- https://www.midijs.net/midijs_api.html (//www.midijs.net/lib/midi.js)-->
+    <script type='text/javascript' src='//www.midijs.net/lib/midi.js'></script>
+
+    <!-- compression https://github.com/dankogai/js-deflate -->
+    <script type="text/javascript" src="js/base64.js"></script>
+    <script type="text/javascript" src="js/rawinflate.js"></script>
+    <script type="text/javascript" src="js/rawdeflate.js"></script>
+
+    <!-- cookies https://github.com/js-cookie/js-cookie -->
+    <script type="text/javascript" src="js/js.cookie.js"></script>
+
+	<!-- core -->
+	<script type="text/javascript" src="js/gridElements.js"></script>
+    <script type="text/javascript" src="levels/levelData.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+	<script type="text/javascript" src="js/touch.js"></script>
+
+	<!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Pacifico" rel="stylesheet">
+
+	<!-- styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="header">
+        Massi
+        <br />
+        <div id="strapline">Avventura</div>
+    </div>
+
+    <div id="screen"></div>
+
+    <!-- mobile controls -->
+    <div class="mobile-controls-container">
+        <div class="mobile-controls">
+            <div class="mobile-button" onclick="inputHandler(37);">&larr;</div>
+            <div class="mobile-button-center-container">
+                <div class="mobile-button mobile-button-center" onclick="inputHandler(38);">&uarr;</div>
+                <div class="mobile-button mobile-button-center" onclick="inputHandler(40);">&darr;</div>
+            </div>
+            <div class="mobile-button mobile-button-last" onclick="inputHandler(39);">&rarr;</div>
+        </div>
+    </div>
+
+    <div class="instructions">
+        <span id="levelDetail">
+            <span id="visualLevel">Level 0</span>
+            <span>: <span id="levelName"></span></span>
+        </span>
+        <span id="endGameWording" class="red-text">Congratulations, You escaped!</span>
+        <br />
+        <span class="instruction">Move count: <span id="level-move-count">0</span>&nbsp;&nbsp;&nbsp;Undos: <span id="level-undo-count">0</span></span>
+        <br /><br />
+        <span class="instruction">Use arrows to move Massi to the <span class="green-text">green exit</span>. <a class="cursorPointer" onclick="inputHandler(88)">X to restart</a>. <a class="cursorPointer" onclick="inputHandler(90)">Z to undo</a>.</span>
+        <br /><br />
+        <div id="level-indicators"></div>
+        <span class="footer-links">
+            <a class='aboutLink' target="_blank" onclick="openModal('aboutAlert');">about</a>
+            <a class='builder-link footer-link' href="builder.html" target="_blank">builder</a>
+            <a class='footer-link' onclick="toggleMobileControls();">touch controls</a>
+            <span class="current-level-edit"></span>
+        </span>
+    </div>
+
+    <!-- modal about alert -->
+    <div id="aboutAlert" class="modal">
+        <div class="modal-content">
+            <span class="aboutAlert_close close">&times;</span>
+            <div class="modal-header red-text model-welcome">Welcome to Massi</div>
+            <div class="modal-body modal-body-about">
+                <p>Your objective is to get Massimo to the <span class="green-text">green exit</span>.</p>
+                <p>Use your <span class="red-text">arrow keys to move</span> him around. Or swipe on mobile.</p>
+                <p>Trial, error and exploration will get you through.</p>
+                <p>If you get stuck, press <span class="red-text">X to restart</span> the level. <span class="red-text">Press Z to undo 1 move</span> (up to 10 undos).</p>
+				<p>Your level progress will be saved in your browser. Your grid progress will not be saved.</p>
+                <p>Use the <span class="red-text" onclick="window.open('builder.html','_blank');" style="cursor:pointer;">builder</span> to create and share your own levels.</p>
+                <p>Good Luck.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

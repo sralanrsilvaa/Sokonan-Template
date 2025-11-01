@@ -1,0 +1,781 @@
+body {
+    background-color: #DAD2D8;
+    font-family: 'Courgette', cursive;
+    margin: 0;
+}
+
+.gameSquare,
+.gameSquareElement {
+    background-color: #e8e8e8;
+    display: inline-block;
+    margin-right: 1px;
+    margin-bottom: 1px;
+    font-size: 11px;
+
+    background-image: url('../images/volex/Retina/Ground/ground_04.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: auto 100%;
+}
+
+.clearFix {
+    clear: both;
+}
+
+#screen {
+    text-align: center;
+    font-size: 0px;
+    width: 100%;
+    line-height: 0;
+}
+
+.center-explosion {
+    background-image: url('../images/volex/Retina/Ground/center-explosion.png');
+}
+
+.explosion-0 {
+    background-image: url('../images/volex/Retina/Ground/explosion_0.png');
+}
+
+.explosion-1 {
+    background-image: url('../images/volex/Retina/Ground/explosion_1.png');
+}
+
+.explosion-2 {
+    background-image: url('../images/volex/Retina/Ground/explosion_2.png');
+}
+
+.explosion-3 {
+    background-image: url('../images/volex/Retina/Ground/explosion_3.png');
+}
+
+.explosion-4 {
+    background-image: url('../images/volex/Retina/Ground/explosion_4.png');
+}
+
+.explosion-5 {
+    background-image: url('../images/volex/Retina/Ground/explosion_5.png');
+}
+
+.explosion-6 {
+    background-image: url('../images/volex/Retina/Ground/explosion_6.png');
+}
+
+.explosion-7 {
+    background-image: url('../images/volex/Retina/Ground/explosion_7.png');
+}
+
+.explosion-8 {
+    background-image: url('../images/volex/Retina/Ground/explosion_8.png');
+}
+
+.character {
+    background-color: #758c8e;
+    background-image: url('../images/volex/Retina/Player/player_03.png') !important;
+}
+
+.cFront {
+    background-image: url('../images/volex/Retina/Player/player_03.png') !important;
+}
+
+.cUp {
+    background-image: url('../images/volex/Retina/Player/player_06.png') !important;
+}
+
+.cUpLeft {
+    background-image: url('../images/volex/Retina/Player/player_08.png') !important;
+}
+
+.cUpRight {
+    background-image: url('../images/volex/Retina/Player/player_07.png') !important;
+}
+
+.cDown {
+    background-image: url('../images/volex/Retina/Player/player_03.png') !important;
+}
+
+.cDownLeft {
+    background-image: url('../images/volex/Retina/Player/player_05.png') !important;
+}
+
+.cDownRight {
+    background-image: url('../images/volex/Retina/Player/player_04.png') !important;
+}
+
+.cLeft {
+    background-image: url('../images/volex/Retina/Player/player_19.png') !important;
+}
+
+.cLeftLeft {
+    background-image: url('../images/volex/Retina/Player/player_19.png') !important;
+}
+
+.cLeftRight {
+    background-image: url('../images/volex/Retina/Player/player_20.png') !important;
+}
+
+.cRight {
+    background-image: url('../images/volex/Retina/Player/player_16.png') !important;
+}
+
+.cRightLeft {
+    background-image: url('../images/volex/Retina/Player/player_17.png') !important;
+}
+
+.cRightRight {
+    background-image: url('../images/volex/Retina/Player/player_16.png') !important;
+}
+
+.cGameEnd {
+    background-image: url('../images/volex/Retina/Player/player_03_end.gif') !important;
+}
+
+.cLevelEnd {
+    background-image: url('../images/volex/Retina/Player/player_03_end.gif') !important;
+}
+
+.cDead {
+    background-image: url('../images/volex/Retina/Player/player_03_dead.png') !important;
+    background-color: #758c8e;
+}
+
+.cFallen {
+    background-image: url('../images/volex/Retina/Player/player_03_fallen.gif') !important;
+    background-color: #758c8e;
+}
+
+.rock {
+    background-image: url('../images/volex/Retina/Environment/environment_15.png') !important;
+}
+
+.dirt {
+    background-image: url('../images/volex/Retina/Environment/environment_15_dirt.png') !important;
+}
+
+.wall {
+    background-image: url('../images/volex/Retina/Blocks/block_08.png');
+}
+
+.exit {
+    background-image: url('../images/volex/Retina/Crates/crate_45.png');
+}
+
+.gate-red {
+    background-image: url('../images/volex/Retina/Environment/environment_04.png');
+}
+
+.key-red {
+    background-image: url('../images/volex/Retina/Ground/key_red.png');
+}
+
+.gate-blue {
+    background-image: url('../images/volex/Retina/Environment/environment_07.png');
+}
+
+.key-blue {
+    background-image: url('../images/volex/Retina/Ground/key_blue.png');
+}
+
+.gate-brown {
+    background-image: url('../images/volex/Retina/Environment/environment_01.png');
+}
+
+.key-brown {
+    background-image: url('../images/volex/Retina/Ground/key_brown.png');
+}
+
+.gate-green {
+    background-image: url('../images/volex/Retina/Environment/environment_09.png');
+}
+
+.key-green {
+    background-image: url('../images/volex/Retina/Ground/key_green.png');
+}
+
+.warp-plate-green {
+    background-image: url('../images/volex/Retina/Ground/ground_01_w.png');
+}
+
+.warp-plate-blue {
+    background-image: url('../images/volex/Retina/Ground/ground_01_k_b.png');
+}
+
+.warp-plate-red {
+    background-image: url('../images/volex/Retina/Ground/ground_01_k_r.png');
+}
+
+.warp-plate-brown {
+    background-image: url('../images/volex/Retina/Ground/ground_01_k_br.png');
+}
+
+.coin {
+    background-image: url('../images/volex/Retina/Ground/ground_coin.png');
+}
+
+.weight-plate {
+    background-image: url('../images/volex/Retina/Crates/crate_01.png');
+}
+
+.weight-plate-gate {
+    background-image: url('../images/volex/Retina/Crates/crate_01_WP_gate.png');
+}
+
+.header {
+    padding: 0px 0 10px 0;
+    text-align: center;
+    font-size: 65px;
+    color: #A8201A;
+    cursor: pointer;
+}
+
+.red-text {
+    color: #A8201A !important;
+}
+
+.green-text {
+	color: green !important;
+}
+
+#visualLevel,
+#levelDetail,
+#endGameWording,
+#levelName,
+#strapline {
+    font-size: 25px;
+    color: #143642;
+}
+
+#endGameWording {
+    display: none;
+}
+
+#visualLevel {
+    color: #A8201A;
+}
+
+#strapline {
+    margin-top: -10px;
+}
+
+.instructions {
+    text-align: center;
+    margin-top: 20px;
+    color: #A8201A;
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.instruction {
+    color: #666;
+}
+
+#level-move-count,
+#total-move-count,
+#level-undo-count {
+    color: #143642;
+}
+
+/* builder styles */
+.builderElement {
+    width: 210px;
+    display: inline-block;
+    text-align: left;
+    cursor: pointer;
+    color: #627577;
+}
+
+.elementLabel {
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 10px;
+    position: relative;
+    top: 4px;
+    font-size: 16px;
+}
+
+.selectedElement {
+    color: #A8201A;
+}
+
+#output {
+    width: 96%;
+    height: 180px;
+    padding: 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+
+.builderButtons {
+    display: flex;
+    text-align: center;
+    width: 100%;
+    margin: 10px 0;
+}
+
+.builderButton {
+    color: #d7dee1;
+    font-size: 15px;
+    padding: 8px 10px 8px 10px;
+    background-color: #7d9598;
+    flex-grow: 1;
+    text-align: center;
+    cursor: pointer;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.builderButton:hover {
+    background-color: #758c8e;
+}
+
+.builderButtonLast {
+    margin-right: 0;
+}
+
+#clearLevelConfirm {
+    background-color: #A8201A;
+    display: none;
+}
+
+.builder-container {
+    width: 100%;
+    text-align: center;
+    min-width: 1085px;
+}
+
+.screen-builder,
+.side-panel-a,
+.side-panel-b {
+    display: inline-block;
+    font-size: 0px;
+}
+
+.side-panel-b {
+    width: 210px;
+    vertical-align: top;
+    text-align: right;
+    margin-left: 10px;
+}
+
+.side-panel-a {
+    width: 210px;
+    vertical-align: top;
+    text-align: left;
+    margin-right: 10px;
+}
+
+.builderInstruction {
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    color: #666;
+    font-size: 16px;
+}
+
+.footer-links {
+    font-size: 12px;
+    color: #999;
+}
+
+.footer-links a {
+    color: #999;
+    text-decoration: none;
+}
+
+.footer-links a:hover {
+    color: #A8201A;
+    text-decoration: underline;
+}
+
+.level-indicator-a {
+    text-decoration: none;
+}
+
+.level-indicator {
+    display: inline-block;
+    color: #FFF;
+    background-color: #999;
+    font-size: 10px;
+    text-align: center;
+    margin: 0 2px;
+    padding: 3px 0;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    cursor: pointer;
+    width: 21px;
+    text-decoration: none;
+}
+
+.level-indicator:hover {
+    background-color: green;
+    color: #FFF;
+}
+
+.level-indicator-incomplete,
+.level-indicator-incomplete:hover {
+    background-color: #dedede;
+    color: #bbb;
+}
+
+.level-indicator-current {
+    background-color: green;
+}
+
+/* multi class styles */
+.coin.rock {
+    background-image: url('../images/volex/Retina/Environment/environment_15_hc.png') !important;
+}
+
+.key-red.rock {
+    background-image: url('../images/volex/Retina/Environment/environment_15_hrk.png') !important;
+}
+
+.key-blue.rock {
+    background-image: url('../images/volex/Retina/Environment/environment_15_hbk.png') !important;
+}
+
+.key-brown.rock {
+    background-image: url('../images/volex/Retina/Environment/environment_15_hbrk.png') !important;
+}
+
+.key-green.rock {
+    background-image: url('../images/volex/Retina/Environment/environment_15_hgk.png') !important;
+}
+
+.warp-plate-red.rock {
+    background-image: url('../images/volex/Retina/Environment/environment_15_hwr.png') !important;
+}
+
+.warp-plate-blue.rock {
+    background-image: url('../images/volex/Retina/Environment/environment_15_hwb.png') !important;
+}
+
+.warp-plate-brown.rock {
+    background-image: url('../images/volex/Retina/Environment/environment_15_hwbr.png') !important;
+}
+
+.warp-plate-green.rock {
+    background-image: url('../images/volex/Retina/Environment/environment_15_hwg.png') !important;
+}
+
+.bomb {
+    background-image: url('../images/volex/Retina/Ground/bomb_g.png') !important;
+}
+
+.weight-plate.bomb {
+    background-image: url('../images/volex/Retina/Crates/crate_01_b.png') !important;
+}
+
+.exit.bomb {
+    background-image: url('../images/volex/Retina/Crates/crate_45_bomb.png') !important;
+}
+
+.bomb.fragile-ground {
+    background-image: url('../images/volex/Retina/Ground/bomb_fg_c.png') !important;
+}
+
+.detonator {
+    background-image: url('../images/volex/Retina/Crates/crate_11_detonator.png');
+}
+
+.hole {
+    background-image: url('../images/volex/Retina/Ground/ground_hole.png');
+}
+
+.fragile-ground {
+    background-image: url('../images/volex/Retina/Ground/ground_fragile_c.png');
+}
+
+.mobile-controls-container {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    margin: 20px auto;
+    background-color: #FFF;
+    display: none;
+}
+
+.mobile-controls {
+    display: flex;
+    width: 250px;
+    height: 150px;
+    margin: 20px auto;
+}
+
+.mobile-button {
+    flex-grow: 1;
+    text-align: center;
+    height: 60px;
+    background-color: #CCC;
+    margin: 40px 0 0 10px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    line-height: 60px;
+    cursor: pointer;
+}
+
+.mobile-button-last {
+    margin-right: 10px;
+}
+
+.mobile-button:hover {
+    background-color: green;
+    color: #FFF;
+}
+
+.mobile-button-center-container {
+    flex-grow: 1.2;
+}
+
+.mobile-button-center {
+    height: 60px;
+    line-height: 60px;
+    margin-top: 10px;
+}
+
+.mobile-spacer {
+    height: 150px;
+    margin-top: 20px;
+}
+
+.footer-link {
+    cursor: pointer;
+    margin-left: 20px;
+}
+
+.replayLink {
+    display: none;
+}
+
+.aboutLink {
+    cursor: pointer;
+}
+
+.modal-body-about p {
+    font-size: 13px;
+}
+
+.cursorPointer {
+    cursor: pointer;
+}
+
+.cursorPointer:hover {
+    color: #A8201A;
+}
+
+/* modal styles */
+/* The Modal (background) */
+.modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    /* Stay in place */
+    z-index: 1;
+    /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%;
+    /* Full width */
+    height: 100%;
+    /* Full height */
+    overflow: auto;
+    /* Enable scroll if needed */
+    background-color: rgb(0, 0, 0);
+    /* Fallback color */
+    background-color: rgba(0, 0, 0, 0.4);
+    /* Black w/ opacity */
+}
+
+.close {
+    color: #333;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    margin-right: 10px;
+}
+
+.close:hover,
+.close:focus {
+    color: #A8201A;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Modal Header */
+.modal-header {
+    padding: 10px 16px;
+    background-color: #CCC;
+    color: #333;
+    border-radius: 10px 10px 0px 0px;
+    -moz-border-radius: 10px 10px 0px 0px;
+    -webkit-border-radius: 10px 10px 0px 0px;
+    font-size: 18px;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 2px 30px 4px 16px;
+    box-sizing: border-box;
+}
+
+/* Modal Footer */
+.modal-footer {
+    padding: 2px 16px;
+    background-color: #5cb85c;
+    color: white;
+}
+
+/* Modal Content */
+.modal-content {
+    position: relative;
+    background-color: #e8e8e8;
+    margin: auto;
+    padding: 0;
+    width: 80%;
+    max-width: 560px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    -webkit-animation-name: animatetop;
+    -webkit-animation-duration: 0.5s;
+    animation-name: animatetop;
+    animation-duration: 0.5s;
+    margin-top: 50px;
+    border-radius: 15px 15px 10px 10px;
+    -moz-border-radius: 15px 15px 10px 10px;
+    -webkit-border-radius: 15px 15px 10px 10px;
+    color: #444;
+}
+
+.modal-content input {
+    padding: 5px 0 5px 5px;
+    font-size: 14px;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    border: 0px;
+    margin-top: 5px;
+}
+
+.modal-content .modal-button {
+    cursor: pointer;
+    padding: 5px 10px;
+    ;
+    border-radius: 4px 4px 4px 4px;
+    -moz-border-radius: 4px 4px 4px 4px;
+    ;
+    -webkit-border-radius: 4px 4px 4px 4px;
+    background-color: #ccc;
+    color: #333;
+    display: inline-block;
+}
+
+.modal-content .modal-button:hover {
+    background-color: #AAA;
+    color: #e8e8e8;
+}
+
+/* Modal Animation */
+@-webkit-keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0px;
+        opacity: 1
+    }
+}
+
+@keyframes animatetop {
+    from {
+        top: -300px;
+        opacity: 0
+    }
+
+    to {
+        top: 0px;
+        opacity: 1
+    }
+}
+
+#shareUrlAlertContent,
+#buildUrlAlertContent {
+    word-wrap: break-word;
+    font-size: 14px;
+}
+
+#level-indicators {
+    margin-bottom: 20px;
+}
+
+/* social */
+#share-buttons {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+#share-buttons a {
+    text-decoration: none;
+}
+
+#share-buttons a img {
+    width: 20px;
+}
+
+#share-buttons a img:hover {
+    opacity: 0.7;
+}
+
+.model-welcome {
+    background-image: url('../images/volex/Retina/Player/player_03.png');
+    background-repeat: no-repeat;
+    background-size: 30px;
+    background-position: left 10px center;
+    padding-left: 50px;
+}
+
+/* responsive styles */
+/* width */
+@media screen and (max-width:500px) {
+    .header {
+        font-size: 40px;
+    }
+
+    #strapline {
+        font-size: 20px;
+    }
+
+    #level-indicators br {
+        display: none;
+    }
+
+    #level-indicators {
+        padding: 0 20px;
+    }
+}
+
+/* height */
+@media screen and (max-height:800px) {
+    .header {
+        font-size: 40px;
+    }
+
+    #strapline {
+        font-size: 20px;
+    }
+
+    #visualLevel,
+    #levelDetail,
+    #endGameWording,
+    #levelName {
+        font-size: 20px;
+    }
+}

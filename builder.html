@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Massi Builder</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width">
+    <link rel="icon" href="images/volex/Retina/favicon.ico">
+
+    <script type="text/javascript">
+        var mode = "builder";
+    </script>
+
+    <!-- jquery -->
+    <script src="js/jquery-1.11.1.min.js" type="text/javascript"></script>
+
+    <!-- compression https://github.com/dankogai/js-deflate -->
+    <script type="text/javascript" src="js/base64.js"></script>
+    <script type="text/javascript" src="js/rawinflate.js"></script>
+    <script type="text/javascript" src="js/rawdeflate.js"></script>
+
+    <!-- core -->
+	<script type="text/javascript" src="js/gridElements.js"></script>
+    <script type="text/javascript" src="levels/levelData.js"></script>
+    <script type="text/javascript" src="js/player.js"></script>
+    <script type="text/javascript" src="js/builder.js"></script>
+
+	<!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Courgette|Pacifico" rel="stylesheet">
+
+	<!-- styles -->
+    <link href="css/styles.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+    <div class="header ">Massi<br />
+        <div id="strapline">Builder</div>
+    </div>
+
+    <div class="builder-container">
+        <div class="side-panel-a">
+            <div id="levelElements-a"></div>
+        </div>
+        <div class="screen-builder">
+            <div id="screen"></div>
+            <div>
+                <div class="builderButtons">
+                    <div class="builderButton" onclick="openModal('builderAlert');">About</div>
+                    <div class="builderButton" onclick="importLevel();">Import Data</div>
+                    <div class="builderButton" onclick="outputLevel();">Output Data</div>
+                    <div class="builderButton" onclick="testLevel();">Test Level</div>
+                    <div class="builderButton" onclick="shareLevel();">Build URL</div>
+                    <div id="clearLevel" class="builderButton builderButtonLast" onclick="clearGridConfirm();">Clear Level</div>
+                    <div id="clearLevelConfirm" class="builderButton builderButtonLast" onclick="clearGrid('clearLevelButton');">Confirm Clear</div>
+                </div>
+                <textarea id="output"></textarea>
+                <div class="builderInstruction">Hold down the ctrl key to place item on mouse over.</div>
+            </div>
+        </div>
+        <div class="side-panel-b">
+            <div id="levelElements-b"></div>
+        </div>
+    </div>
+
+    <!-- modal build url alert -->
+    <div id="buildUrlAlert" class="modal">
+        <div class="modal-content">
+            <span class="buildUrlAlert_close close">&times;</span>
+            <div class="modal-header">Build URL</div>
+            <div class="modal-body">
+                <p id="buildUrlAlertContent"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- modal help alert -->
+    <div id="builderAlert" class="modal">
+        <div class="modal-content">
+            <span class="builderAlert_close close">&times;</span>
+            <div class="modal-header red-text model-welcome">Welcome to Massi Builder</div>
+            <div class="modal-body modal-body-about">
+                <p>Use the builder to create and share your own levels.</p>
+                <p><span class="red-text">Test Level</span> to make sure your level can be completed.</p>
+                <p>Get your <span class="red-text">Build URL</span> to continue working on your level later.</p>
+                <p>Complete your test level and a <span class="red-text">replay</span> link will appear. Click replay to view your replay. Share your replay URL to show others the solution.</p>
+                <p>Good Luck.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
